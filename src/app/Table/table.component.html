@@ -1,0 +1,77 @@
+<div class="table-posts">
+  <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef> Username </th>
+      <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Dirección </th>
+      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Correo </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef> Phone number </th>
+      <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="expand">
+      <th mat-header-cell *matHeaderCellDef aria-label="row actions">Post</th>
+      <td mat-cell *matCellDef="let element">
+  
+        <button mat-icon-button aria-label="expand row" (click)="toggleExpansion(element)">
+          <mat-icon>{{ element.expanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="expandedDetail">
+      <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplayWithExpand.length">
+        <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+  
+          <div *ngIf="dataPosts != []; else elseEmpty" style="display: flex;padding: 28px 48px;">
+            <div>
+              <ng-container *ngFor="let post of dataPosts">
+                <div class="example-element-diagram">
+                  <h2>{{ post.title }}</h2>
+                  <p>{{ post.description }}</p>
+                </div>
+  
+              </ng-container>
+            </div>
+  
+            <div class="example-element-description">
+              <div style="width: 124px;">
+                <button class="primary" (click)="createPost()">Crear Post</button>
+              </div>
+            </div>
+          </div>
+  
+          <ng-template #elseEmpty>
+            <div style="text-align: center;">
+              Aún no tienes posts
+            </div>
+          </ng-template>
+        </div>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplayWithExpand"></tr>
+    <tr mat-row *matRowDef="let element; columns: columnsToDisplayWithExpand;" class="example-element-row"
+      [class.example-expanded-row]="expandedElement === element"
+      (click)="expandedElement = expandedElement === element ? null : element">
+    </tr>
+    <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+  </table>
+</div>

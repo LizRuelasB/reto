@@ -1,0 +1,11 @@
+.modal-post {
+  padding: 60px;
+  position: relative;
+
+  &__icon-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+

@@ -1,0 +1,27 @@
+<div class="modal-post">
+  <!-- <button class="modal" (click)="closeDialog()">Cerrar</button> -->
+  <button class="modal-post__icon-close" mat-icon-button (click)="closeDialog()">
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <h1>Crear post</h1>
+  <mat-dialog-content class="mat-typography">
+    <form [formGroup]="formPost"> 
+      <mat-form-field appearance="outline">
+        <mat-label>Titulo</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="center">
+    <div style="width: 277px; margin-top: 100px;">
+      <button class="primary" (click)="savePost()">Guardar</button>
+    </div>
+  </mat-dialog-actions>
+</div>
+

@@ -1,0 +1,52 @@
+:host {
+  display: block !important;
+  overflow: hidden !important;
+}
+
+.login {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  &__column {
+    
+
+    &__img {
+      width: 50vw; 
+      height: 100vh;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+    }
+
+    &__content {
+      width: 50vw; 
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        color: #2D3748;
+      }
+  
+      h1 {
+        font-size: 30px;
+        font-weight: 700; 
+        color: #1A202C;
+      }
+
+      &__btn-dark {
+        background-color: #2D3748;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+

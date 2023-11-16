@@ -1,0 +1,114 @@
+<div class=" home">
+  <div class=" container header">
+    <div class="row">
+      <div class="col-6 header__right">
+        <div>
+          <img src="../../assets/images/Logo.svg" alt="">
+        </div>
+        <nav>
+          <ul class="header__right__menu" >
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-6">
+        <div class="header__buttons">
+          <div style="width: auto;">
+            <button class="primary" (click)="goLogin()" >Iniciar sesión</button>
+          </div>
+          
+          <button class="header__buttons__secondary" >Regístrate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" container home__banner">
+    <div style="margin-top: 96px;">
+      <h1>
+        The easiest way to manage projects
+      </h1>
+      <p>
+        From the small stuff to the big picture, organizes the work so teams know what to do, why it matters, and how to get it done.
+      </p>
+      <div class="home__banner__buttons">
+        <div style="width: 138px;">
+          <button class="primary" >Get Started</button>
+        </div>
+        <div style="width: 179px;">
+          <button class="link" > <img src="../../assets/icons/Play-icon.svg" alt=""> Watch Video</button>
+        </div>
+      </div>
+    </div>
+    <div class="home__banner__logo">
+      <img src="../../assets/images/Mobile.svg" alt="">
+    </div>
+  </div>
+
+  <div class="container home__features">
+    <h2>Tailor-made features</h2>
+    <p class="container home__features__description">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+  
+    <div  class="home__features__cards">
+      <div *ngFor="let feat of features" class="home__features__cards__card">
+        <img [src]="feat.icon" alt="">
+        <h3>{{ feat.title }}</h3>
+        <p>{{ feat.description}}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container home__footer">
+      <div>
+        <img src="../../assets/images/Logomark.svg" alt="">
+        <div style="margin: 12px auto;">
+          <span>Download</span> <span>License</span>
+        </div>
+        <div class="home__footer__list-menu">
+          <ul>
+            <li>About</li>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>News</li>
+            <li>Help</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="home__footer__span">
+          <span class="">© 2021 Landify UI Kit. All rights reserved</span>
+        </div>
+      </div>
+      <div>
+        <img src="../../assets/images/Logomark.svg" alt="">
+        <div style="margin: 12px auto;">
+          <span>Contáctanos</span>
+        </div>
+        <div class="home__footer__list-menu">
+          <ul>
+            <li>Whatsapps</li>
+            <li>978 566 567</li>
+            <li>967 567 565</li>
+          </ul>
+        </div>
+        <div class="home__footer__span">
+          <span class="">© 2021 Landify UI Kit. All rights reserved</span>
+        </div>
+      </div>
+      <div>
+        <div class="home__footer__apps">Get the App</div>
+        <div style="margin: 16px 0px;">
+          <img src="../../assets/images/app-store.svg" alt="">
+        </div>
+        <div>
+          <img src="../../assets/images/google-play.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>

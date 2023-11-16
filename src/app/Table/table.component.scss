@@ -1,0 +1,47 @@
+
+
+
+.table-posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+table {
+  font-family: 'Roboto', sans-serif !important;
+  width: 1162px;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+  
+
+}
+
+.example-element-diagram {
+  width: 80%;
+
+}
+
+.example-element-description {
+  width: 20%;
+}
+
+
